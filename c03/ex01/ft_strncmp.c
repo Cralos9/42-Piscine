@@ -1,0 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cacarval <cacarval@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/09 16:34:16 by cacarval          #+#    #+#             */
+/*   Updated: 2023/02/15 10:52:01 by cacarval         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
+{
+	unsigned int	i;
+
+	i = 0;
+	while ((s1[i] != '\0' || s2[i]) && (i < n))
+	{
+		if (s1[i] < s2[i])
+		{
+			return (-1);
+		}
+		if (s1[i] > s2[i])
+		{
+			return (1);
+		}
+		i++;
+	}
+	return (0);
+}
+
+// int main (void)
+// {
+// 	int n;
+// 	n = 1;
+// 	char s1[] = "hello";
+// 	char s2[] = "hello";
+// 	printf(" %d ",ft_strncmp(s1, s2, n));
+// 	return(0);
+// }
